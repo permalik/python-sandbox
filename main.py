@@ -3,8 +3,8 @@
 python_curricula entrypoint
 """
 
-from calc import fibonacci
+from calc.fibonacci import v1_fibonacci
 
 for i in range(10):
-    print(fibonacci.v1(i), ' ', end='')
+    print(v1_fibonacci(i), ' ', end='')
     
