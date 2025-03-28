@@ -9,6 +9,7 @@ from fundamental.calc.fibonacci import v1_fibonacci
 
 
 def main():
+    # Initialize Parser and Subparser
     parser = argparse.ArgumentParser(description="python_curricula CLI")
     subparsers = parser.add_subparsers(
         dest="category", required=True, help="Select a Category"
