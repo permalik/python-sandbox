@@ -5,7 +5,8 @@ python_curricula
 
 import argparse
 
-from fundamental.calc.fibonacci import v1_fibonacci
+from algorithm.sort.insertion_sort import insertion_sort_v1
+from fundamental.calc.fibonacci import fibonacci_v1
 
 
 def main():
@@ -32,15 +33,23 @@ def main():
     alg_parser = subparsers.add_parser("alg", help="Algorithm Programs")
     alg_subparsers = alg_parser.add_subparsers(dest="alg", required=True)
 
-    # Calc Subcategory
-    # Fibonacci V1
+    # Fundamental: Calc: Fibonacci V1
     fib_v1_parser = fun_subparsers.add_parser(
         "fibonacci_v1", help="Compute Fibonacci Sequence"
     )
     fib_v1_parser.add_argument(
         "-n", "--iterations", type=int, default=10, help="Number of iterations"
     )
-    fib_v1_parser.set_defaults(func=v1_fibonacci)
+    fib_v1_parser.set_defaults(func=fibonacci_v1)
+
+    # Algorithm: Sort: Insertion Sort V1
+    insort_v1_parser = alg_subparsers.add_parser(
+        "insertion_sort_v1", help="Sort Integer List"
+    )
+    insort_v1_parser.add_argument(
+        "-n", "--length", type=int, default=10, help="Length of list"
+    )
+    insort_v1_parser.set_defaults(func=insertion_sort_v1)
 
     args = parser.parse_args()
     args.func(args)

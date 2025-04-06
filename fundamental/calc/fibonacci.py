@@ -1,4 +1,4 @@
-def v1_fibonacci(args):
+def fibonacci_v1(args):
     def execute(n):
         if n == 0:
             return n
