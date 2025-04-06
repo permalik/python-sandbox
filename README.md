@@ -1,2 +1,2 @@
-# python_construct
-construct:standard programs written in python
+# python_sandbox
+sandbox:Python Programming and Turnkey Ecosystem
